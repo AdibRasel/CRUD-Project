@@ -1,0 +1,38 @@
+.NavBar{
+    display: flex;
+    background: #878383;
+    padding: 20px;
+}
+.LeftSide, .LeftSide a{
+    width: 30%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.RightSide{
+    width: 70%;
+    margin: auto;
+}
+.RightSide ul{
+
+}
+.RightSide ul li{
+    display: inline;
+    list-style-type: none;
+
+}
+.RightSide ul li a{
+    padding: 20px;
+    background-color: #9e9e9e;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: 700ms;
+}
+.RightSide ul li a:hover{
+    background: #878383;
+    color: rgb(0, 0, 0);
+}
