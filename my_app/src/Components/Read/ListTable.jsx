@@ -13,8 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-
-function ListTable() {
+function ListTable(props) {
 
   let [DataList, SetDataList]= useState([]);
 
@@ -39,6 +38,8 @@ function ListTable() {
 
     Delete(id).then((Result)=>{
       if(Result===true){
+        // Evry click relode component 
+        window.location.reload()
         toast.success("Delete Item Success")
       }
       else{
@@ -46,16 +47,18 @@ function ListTable() {
       }
     })
 
-    // Evry click relode component 
-    window.location.reload()
+
 
 
   }
 
   // Update Button 
   const UpdateItem=(id)=>{
-    alert(id)
+    // props.history.push('/Update/'+id);
+    // console.log(id);
+
   }
+  // End Update Button 
 
 
 
@@ -101,6 +104,7 @@ function ListTable() {
                       <td>{item.TotalPrice}</td>
                       <td>
                         <button onClick={UpdateItem.bind(this, item._id) } className='btn btn-success mx-1'>Update</button>
+                        
                         <button onClick={DeleteItem.bind(this, item._id)} className='btn btn-danger mx-1'>Delete</button>
                       </td>
                     </tr>

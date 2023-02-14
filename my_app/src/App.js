@@ -19,7 +19,9 @@ class App extends Component {
                     <Routes>
                         <Route path="/" element={<ReadPage />} />
                         <Route path="/Create" element={<CreatePage />} />
-                        <Route path="/Update" element={<UpdatePage />} />
+                        <Route path="/Update/:id" element={<UpdatePage />} />
+                        {/* <Route path="/Update/:id" element={(props)=><UpdatePage {...props} key={Date.now()} />} /> */}
+                        {/* <Route path="/Update/:id" render={(props)=><UpdatePage {...props} key={Date.now()} />} /> */}
                     </Routes>
                 </BrowserRouter>
         );
